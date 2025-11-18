@@ -1,0 +1,42 @@
+<!-- File: feedback_form.html -->
+<!-- User Feedback Form for Feedback Microservice -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>User Feedback Form</title>
+</head>
+<body>
+    <h1>Submit Feedback</h1>
+
+    <form action="http://localhost:4003/api/feedback" method="POST">
+
+        <label for="name"><strong>Name:</strong></label>
+        <br>
+        <input type="text" id="name" name="name" required>
+        <br>
+
+        <label for="email"><strong>Email:</strong></label>
+        <br>
+        <input type="email" id="email" name="email" required>
+        <br>
+
+        <label for="category"><strong>Feedback Category:</strong></label>
+        <br>
+        <select id="category" name="category" required>
+            <option value="">Select a category...</option>
+            <option value="bug report">Bug Report</option>
+            <option value="feedback">Feedback</option>
+            <option value="other">Other</option>
+        </select>
+        <br>
+
+        <label for="message"><strong>Your Feedback:</strong></label>
+        <br>
+        <textarea id="message" name="message" rows="5" cols="40" required></textarea>
+        <br>
+
+        <button type="submit">Submit Feedback</button>
+    </form>
+</body>
+</html>
