@@ -46,8 +46,9 @@ app.post('/api/feedback', asyncHandler(async (req, res) => {
     res.status(201).json(result);
 }));
 
-//GET (optional): Get all feedback entries
+//GET: Get all feedback entries
 app.get('/api/feedback', asyncHandler(async (req, res) => {
     const allFeedback = await getAllFeedback();
     res.status(200).json(allFeedback);
+
 }));
